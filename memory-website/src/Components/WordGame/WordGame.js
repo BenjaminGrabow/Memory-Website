@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { Route } from 'react-router-dom';
 
 const StyledDiv = styled.div`
 
@@ -28,6 +29,17 @@ class WordGame extends React.Component {
                 })
         };
 
+        addWord = () => {
+                
+                this.setState( prevState => {
+                        const newWord = {word: this.state.input};
+                        return {
+                                list: prevState.list.concat(newWord),
+                                input: ''
+                        }
+                })
+        }
+
         render() {
                 return (
                         <StyledDiv>
@@ -38,6 +50,7 @@ class WordGame extends React.Component {
                                         </ul>
                                 })}
                                 <input value={this.state.input} onChange={this.changeInput} placeholder='Add a new word'></input>
+                                <button onClick={this.addWord}>Add new word</button>
                         </StyledDiv>
                 );
         }
