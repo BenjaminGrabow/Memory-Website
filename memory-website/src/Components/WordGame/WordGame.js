@@ -1,6 +1,6 @@
 import React from 'react';
 
-class WordGame extends Component {
+class WordGame extends React.Component {
         constructor(props) {
                 super(props);
                 this.state = { 
