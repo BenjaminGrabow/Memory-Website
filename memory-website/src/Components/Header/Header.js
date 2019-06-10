@@ -17,7 +17,7 @@ const Header = () => {
         return (
                 <StyledHeader>
                         <nav>
-                                <Link to="#">Home</Link>
+                                <Link to="/">Home</Link>
                                 <Link to="/picture_game">Picture Game</Link>
                                 <Link to="#">Games</Link>
                                 <Link to="#">Team</Link>
