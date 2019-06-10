@@ -3,10 +3,21 @@ import React from 'react';
 class WordGame extends Component {
         constructor(props) {
                 super(props);
-                this.state = {  }
+                this.state = { 
+                        input: ""
+                 }
         }
+
+        changeInput = (event) => {
+console.log(event)
+        }
+
         render() { 
-                return (  );
+                return ( 
+                        <div>
+                                <input value={this.state.input} onChange={this.changeInput} placeholder='Add a new word'></input>
+                        </div>
+                 );
         }
 }
  
