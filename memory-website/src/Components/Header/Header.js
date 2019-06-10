@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
@@ -16,10 +17,10 @@ const Header = () => {
         return (
                 <StyledHeader>
                         <nav>
-                                <a href="#">Home</a>
-                                <a href="#">About</a>
-                                <a href="#">Games</a>
-                                <a href="#">Team</a>
+                                <Link to="#">Home</Link>
+                                <Link to="/picture_game">Picture Game</Link>
+                                <Link to="#">Games</Link>
+                                <Link to="#">Team</Link>
                         </nav>
                 </StyledHeader>
           );
