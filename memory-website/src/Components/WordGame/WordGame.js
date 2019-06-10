@@ -12,7 +12,13 @@ class WordGame extends React.Component {
         constructor(props) {
                 super(props);
                 this.state = {
-                        input: ""
+                        input: "",
+                        list: [{
+                                word: 'contract'
+                        },
+                        {
+                                word: 'workspace'
+                        }]
                 }
         }
 
@@ -26,9 +32,11 @@ class WordGame extends React.Component {
                 return (
                         <StyledDiv>
                                 <h1>Add here your words</h1>
-                                <ul>
-                                        <li>contract</li>
-                                </ul>
+                                {this.state.list.map(list => {
+                                        return <ul>
+                                                <li>{list.word}</li>
+                                        </ul>
+                                })}
                                 <input value={this.state.input} onChange={this.changeInput} placeholder='Add a new word'></input>
                         </StyledDiv>
                 );
