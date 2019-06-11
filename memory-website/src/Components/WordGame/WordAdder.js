@@ -75,7 +75,7 @@ class WordAdder extends React.Component {
                         <StyledDiv>
                                 <h1>Add here your words</h1>
                                 {this.state.list.map((list) => {
-                                        return <ul>
+                                        return <ul key={list.id}>
                                                 <li id={this.state.list.id} onClick={event => this.deleteWord(event.target.textContent)}>{list.word}</li>
                                         </ul>
                                 })}
