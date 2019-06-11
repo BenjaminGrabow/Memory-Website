@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Route } from 'react-router-dom';
+import { NavLink, Route, withRouter } from 'react-router-dom';
 import GameWrapper from '../PictureGame/GameWrapper';
 import WordGameWrapper from '../WordGame/WordGameWrapper';
 import styled from 'styled-components';
@@ -41,4 +41,4 @@ class Header extends React.Component {
         }
 }
 
-export default Header;
+export default withRouter(Header);
