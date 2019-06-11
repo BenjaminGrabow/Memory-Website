@@ -20,19 +20,25 @@ a {
 }
 `;
 
-const Header = () => {
-        return (
-                <StyledHeader>
-                        <nav>
-                                <NavLink to="/">Home</NavLink>
-                                <NavLink to="/picture_game">Picture Game</NavLink>
-                                <NavLink to="/word_game">Word Game</NavLink>
-                                <NavLink to="#">Team</NavLink>     
-                        </nav>
-  <Route path="/picture_game" component={GameWrapper} />
-  <Route path="/word_game" component={WordGameWrapper} />
-                </StyledHeader>
-          );
+class Header extends React.Component {
+        constructor(props) {
+                super(props);
+                this.state = {}
+        }
+        render() {
+                return (
+                        <StyledHeader>
+                                <nav>
+                                        <NavLink to="/">Home</NavLink>
+                                        <NavLink to="/picture_game">Picture Game</NavLink>
+                                        <NavLink to="/word_game">Word Game</NavLink>
+                                        <NavLink to="#">Team</NavLink>
+                                </nav>
+                                <Route path="/picture_game" component={GameWrapper} />
+                                <Route path="/word_game" component={WordGameWrapper} />
+                        </StyledHeader>
+                );
+        }
 }
- 
+
 export default Header;
