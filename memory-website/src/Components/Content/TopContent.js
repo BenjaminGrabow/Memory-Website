@@ -1,8 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyleDiv = styled.div`
+
+.row {
+        display: flex;
+}
+`;
 
 const TopContent = () => {
         return (
-                <div>
+                <StyleDiv>
                         <h1>One platform.
 <br />
                                 From purchase request to general ledger</h1>
@@ -38,7 +46,7 @@ const TopContent = () => {
                                         <a href="/"> Learn more -></a>
                                 </div>
                         </div>
-                </div>);
+                </StyleDiv>);
 }
 
 export default TopContent;

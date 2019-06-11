@@ -1,7 +1,10 @@
 import React from 'react';
+import TopContent from './TopContent';
 
 const ContentWrapper = () => {
-        return (  );
+        return ( 
+                <TopContent/>
+         );
 }
  
 export default ContentWrapper;
