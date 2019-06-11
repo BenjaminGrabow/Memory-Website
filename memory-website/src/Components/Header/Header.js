@@ -1,26 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
+import GameWrapper from '../PictureGame/GameWrapper';
+import WordGameWrapper from '../WordGame/WordGameWrapper';
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
-width: 100%;
+
+background-color: black;
+
+ nav {
+        background: black;
+        height: 3rem;
+        width: 100%;
+ }
 
 a {
-        width: 100%;
         text-decoration: none;
-        margin: 1rem;
+        width: 100%;
+        color: white;
+        padding: 1.5rem;
+        
 }
-
 `;
 
 const Header = () => {
         return (
                 <StyledHeader>
                         <nav>
-                                <Link to="/">Home</Link>
-                                <Link to="/picture_game">Picture Game</Link>
-                                <Link to="/word_game">Word Game</Link>
-                                <Link to="#">Team</Link>
+                                <NavLink to="/">Home</NavLink>
+                                <NavLink to="/picture_game">Picture Game</NavLink>
+                                <NavLink to="/word_game">Word Game</NavLink>
+                                <NavLink to="#">Team</NavLink>
+
+                                
+  <Route path="/picture_game" component={GameWrapper} />
+  <Route path="/word_game" component={WordGameWrapper} />
                         </nav>
                 </StyledHeader>
           );
