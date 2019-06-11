@@ -6,11 +6,8 @@ import styled from 'styled-components';
 
 const StyledHeader = styled.header`
 
-background-color: black;
-
  nav {
         background: black;
-        height: 3rem;
         width: 100%;
  }
 
@@ -30,12 +27,10 @@ const Header = () => {
                                 <NavLink to="/">Home</NavLink>
                                 <NavLink to="/picture_game">Picture Game</NavLink>
                                 <NavLink to="/word_game">Word Game</NavLink>
-                                <NavLink to="#">Team</NavLink>
-
-                                
+                                <NavLink to="#">Team</NavLink>     
+                        </nav>
   <Route path="/picture_game" component={GameWrapper} />
   <Route path="/word_game" component={WordGameWrapper} />
-                        </nav>
                 </StyledHeader>
           );
 }
