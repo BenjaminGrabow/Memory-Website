@@ -40,14 +40,14 @@
 
 .box {
     width        : 25%;
-    height       : 50px;
+    height       : 4rem;
     border-radius: 5rem;
     font-family  : entypo;
     color        : 212121;
     background   : white;
     text-align   : center;
     line-height  : 5rem;
-    font-size    : 3rem;
+    font-size    : 2rem;
     cursor       : pointer;
     margin       : 1rem 3rem 0 4rem;
     transition   : 1s;
