@@ -3,7 +3,7 @@ import WordAdder from './WordAdder';
 
 function WordGameWrapper() {
         return (
-                <div className="App">
+                <div className="page">
                     <WordAdder />    
                 </div>
         );

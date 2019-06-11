@@ -71,7 +71,7 @@ export default class GameWrapper extends React.Component {
   render() {
     console.log(this.state.result)
     return (
-      <div>
+      <div className="page">
         <StyledDiv onClick={this.showme}>
           <Droppable id="dr1"
             allowTheDrop={this.allowDrop}
