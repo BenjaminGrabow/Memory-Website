@@ -1,17 +1,24 @@
 import React from 'react';
-import SocialMedia from './SocialMedia';
+import styled from 'styled-components';
+
+const StyledFooter = styled.footer`
+
+display: flex;
+
+.footer-right {
+        display: flex;
+}
+`;
 
 const Footer = () => {
         return (
-                <div>
-                        <SocialMedia />
-                        <footer>
+                        <StyledFooter>
                                 <div className="footer-left">
                                         {/* <img></img> */}
                                         <p>Memory</p>
                                         <p>Memory Inc. 2019</p>
                                 </div>
-                                <div className="footer-left">
+                                <div className="footer-right">
                                         <div className="row">
                                                 <h4>Top Features</h4>
                                                 <p>Pre-approvels</p>
@@ -39,8 +46,7 @@ const Footer = () => {
                                                 <p>Linkedin</p>
                                         </div>
                                 </div>
-                        </footer>
-                </div>
+                        </StyledFooter>
         );
 }
 
