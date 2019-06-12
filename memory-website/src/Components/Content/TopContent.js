@@ -38,16 +38,16 @@ const TopContent = () => {
         <button>Get a demo</button>
         <p>Trusted by finance teams at all stages</p>
         <div className="row">
-                <img src={google} />
-        <img src={microsoft} />
+                <img src={google} alt="google" />
+        <img src={microsoft} alt="microsoft"/>
         </div>
         <div className="row">
-        <img src={siemens} />
-        <img src={huawei} />
+        <img src={siemens}  alt="siemens"/>
+        <img src={huawei} alt="huawei"/>
         </div>
 </div>
 <div className="right">
-        <img src={bulb}/>
+        <img src={bulb} alt="bulb"/>
 </div>
                 </StyledDiv>
          );

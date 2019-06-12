@@ -50,14 +50,14 @@ const MiddleContent = () => {
                         <p>Scalable workflows to request, pay, and sync transactions to GL in real-time.</p>
                         <div className="row">
                                 <div className="column">
-                                        <img src={pic1}></img>
+                                        <img src={pic1} alt="pic1"></img>
                                         <h3>Pre-approvals</h3>
                                         <p>Get ahead of spend with a <br />
                                                 streamlined approval process.</p>
                                         <a href="/"> Learn more &rarr;</a>
                                 </div>
                                 <div className="column">
-                                        <img src={pic2}>
+                                        <img src={pic2} alt="pic2">
                                         </img>
                                         <h3>Payments</h3>
                                         <p>All of your payments--card, ACH<br />
@@ -65,14 +65,14 @@ const MiddleContent = () => {
                                         <a href="/"> Learn more <span>&rarr;</span></a>
                                 </div>
                                 <div className="column">
-                                        <img src={pic3}></img>
+                                        <img src={pic3} alt="pic3"></img>
                                         <h3>Accounting</h3>
                                         <p>Automate accounting<br />
                                                 faster.</p>
                                         <a href="/"> Learn more <span>&rarr;</span></a>
                                 </div>
                                 <div className="column">
-                                        <img src={pic4}></img>
+                                        <img src={pic4} alt="pic4"></img>
                                         <h3>Visibility</h3>
                                         <p>Drive speed accountability, reduce<br />
                                                 waste, and increase savings.</p>
