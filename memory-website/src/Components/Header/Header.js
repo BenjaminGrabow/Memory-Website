@@ -1,8 +1,9 @@
 import React from 'react';
-import { NavLink, Route, withRouter, Switch } from 'react-router-dom';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import GameWrapper from '../PictureGame/GameWrapper';
 import WordGameWrapper from '../WordGame/WordGameWrapper';
+import ContentWrapper from '../Content/ContentWrapper';
+import { NavLink, Route, withRouter, Switch } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
@@ -99,6 +100,7 @@ class Header extends React.Component {
                                                 <div
                                                         className={this.getPathDepth(location) - this.state.prevDepth >= 0 ? "left" : "right"}>
                                                         <Switch location={location}>
+                                                                <Route exact path="/" component={ContentWrapper} />
                                                                 <Route path="/picture_game" component={GameWrapper} />
                                                                 <Route path="/word_game" component={WordGameWrapper} />
                                                         </Switch>

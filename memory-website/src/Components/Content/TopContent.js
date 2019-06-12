@@ -9,6 +9,10 @@ import styled from 'styled-components';
 const StyledDiv = styled.div`
 display: flex;
 
+button {
+
+}
+
 .left {
         margin: 1rem;
 }
