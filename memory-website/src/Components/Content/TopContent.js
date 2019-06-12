@@ -10,11 +10,19 @@ const StyledDiv = styled.div`
 display: flex;
 
 button {
-
+        background-color: #28a745;
+        color: white;
+        border-radius: 2rem;
+        box-shadow: 1rem .5rem .5rem black;
 }
 
 .left {
         margin: 1rem;
+}
+.trust {
+        color: #dedede;
+        font-weight: bold;
+        font-size: .8rem;
 }
 .row {
  img {
@@ -40,7 +48,7 @@ const TopContent = () => {
         <p>Manage yoour entire spend process in one place. Request, pay, and automate <br/>
         your AP accounting with Airbase</p>
         <button>Get a demo</button>
-        <p>Trusted by finance teams at all stages</p>
+        <p className="trust">Trusted by finance teams at all stages</p>
         <div className="row">
                 <img src={google} alt="google" />
         <img src={microsoft} alt="microsoft"/>

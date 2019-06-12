@@ -28,7 +28,7 @@ const StyleDiv = styled.div`
         
                 a {
                         text-decoration: none;
-                        color: #28a745;;
+                        color: #28a745;
                         font-weight: bolder;
                 }
 
