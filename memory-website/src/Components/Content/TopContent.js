@@ -27,7 +27,7 @@ button {
 .row {
  img {
          width: 30%;
-         height: 3rem;
+         height: 4rem;
  }
 }
 
