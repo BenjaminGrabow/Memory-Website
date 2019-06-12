@@ -40,7 +40,7 @@ const Footer = () => {
                                 <div className="footer-left">
                                         {/* <img></img> */}
                                         <h1>Memory</h1>
-                                        <p>Memory Inc. 2019</p>
+                                        <p>&copy; Memory Inc. 2019</p>
                                 </div>
                                 <div className="footer-right">
                                         <div className="row">

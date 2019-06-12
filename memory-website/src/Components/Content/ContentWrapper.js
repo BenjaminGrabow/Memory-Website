@@ -1,9 +1,16 @@
 import React from 'react';
-import TopContent from './TopContent';
+import MiddleContent from './MiddleContent';
+import styled from 'styled-components';
+
+const StyledContainer = styled.div`
+
+`;
 
 const ContentWrapper = () => {
         return ( 
-                <TopContent/>
+                <StyledContainer>
+                 <MiddleContent/>
+                </StyledContainer>
          );
 }
  
