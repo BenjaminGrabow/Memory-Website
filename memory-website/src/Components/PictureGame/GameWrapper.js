@@ -29,6 +29,7 @@ export default class GameWrapper extends React.Component {
     this.state = {
       pictures: [],
       result: [],
+      checker: '',
     }
   }
 
@@ -36,15 +37,15 @@ export default class GameWrapper extends React.Component {
     this.setState({
       pictures: pictureData,
     })
-    console.log(this.state.result)
   };
 
   drag = (event) => {
-    event.dataTransfer.setData('transfer', event.target.id);
+    event.dataTransfer.setData('transfer', event.target.id );
   };
 
   dontAllowDrop = (event) => {
     event.stopPropagation();
+    // console.log(event.target.alt)
   };
 
   allowDrop = (event) => {
@@ -69,7 +70,7 @@ export default class GameWrapper extends React.Component {
   }
 
   render() {
-    console.log(this.state.result)
+   
     return (
       <div className="page">
         <StyledDiv onClick={this.showme}>

@@ -6,7 +6,8 @@ const Draggable = props => {
                         draggable='true'
                         onDragStart={props.dragFunction}
                         onDragOver={props.noAllowDrop}
-                        onClick={event => props.safesrc(event, props)} >
+                        onClick={event => props.safesrc(event, props)} 
+                        >
                         {props.children}
                 </div>
         );
