@@ -15,11 +15,9 @@ class WordAdder extends React.Component {
                         input: "",
                         list: [{
                                 word: 'contract',
-                                id: 1
                         },
                         {
                                 word: 'workspace',
-                                id: 2
                         }]
                 }
         }
@@ -46,7 +44,6 @@ class WordAdder extends React.Component {
                         } else {
                                 const newWord = {
                                         word: this.state.input,
-                                        id: 1
                                 };
                                 return {
                                         list: prevState.list.concat(newWord),
@@ -67,17 +64,16 @@ class WordAdder extends React.Component {
                                 list: result
                         }
                 })
-
         }
 
         render() {
                 return (
                         <StyledDiv>
                                 <h1>Add here your words</h1>
-                                {this.state.list.map((list) => {
-                                        return <ul key={list.id}>
-                                                <li id={this.state.list.id}>{list.word}</li>
-                                                <button onClick={event => this.deleteWord(event.target.textContent)}>X</button>
+                                {this.state.list.map((list, index) => {
+                                        return <ul key={index}>
+                                                <li id={index}>{list.word}</li>
+                                                <button id={list.word} onClick={(event) => this.deleteWord(event.target.id , index)}>X</button>
                                         </ul>
                                 })}
                                 <input value={this.state.input} onChange={this.changeInput} placeholder='Add a new word'></input>
