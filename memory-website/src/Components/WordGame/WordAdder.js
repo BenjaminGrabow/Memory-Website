@@ -41,25 +41,13 @@ class WordAdder extends React.Component {
 
         addWord = () => {
                 this.setState(prevState => {
-
-                        if (prevState.list === []) {
-                                const newWord = {
-                                        word: this.state.input,
-                                        id: prevState.list[prevState.list.length - 1].id + 1
-                                };
-                                return {
-                                        list: prevState.list.concat(newWord),
-                                        input: ''
-                                }
-                        } else {
-                                const newWord = {
-                                        word: this.state.input,
-                                };
-                                return {
-                                        list: prevState.list.concat(newWord),
-                                        input: ''
-                                }
-                        }
+                        const newWord = {
+                                                word: this.state.input,
+                                        };
+                                        return {
+                                                list: prevState.list.concat(newWord),
+                                                input: ''
+                                        }
                 })
         };
 
@@ -82,8 +70,28 @@ class WordAdder extends React.Component {
         };
 
         addWordGame = () => {
+                this.setState(prevState => {
+                        const newWord = {
+                                                word: this.state.inputGame,
+                                        };
+                                        return {
+                                                gameList: prevState.gameList.concat(newWord),
+                                                input: ''
+                                        }
+                })
+        };
 
-        }
+        deleteWordGame = (target) => {
+                this.setState(prevState => {
+
+                        const result = prevState.gameList.filter(listItems => listItems.word !== target);
+
+                        return {
+
+                                gameList: result
+                        }
+                })
+        };
 
         render() {
                 return (
@@ -103,14 +111,14 @@ class WordAdder extends React.Component {
                                 </div>
                                 <div className={this.state.startScreen === 'off' ? 'on' : 'off'}>
                                         <h1>Start writing your words from your memory</h1>
-                                        <input name='inputGame' value={this.state.inputGame} onChange={this.changeInput} placeholder='Add a new word'></input>
-                                        <button onClick={this.addWordGame}>Add new word</button>
-                                        {this.state.list.map((list, index) => {
+                                        {this.state.gameList.map((list, index) => {
                                                 return <ul key={index}>
                                                         <li id={index}>{list.word}</li>
-                                                        <button id={list.word} onClick={(event) => this.deleteWord(event.target.id, index)}>X</button>
+                                                        <button id={list.word} onClick={(event) => this.deleteWordGame(event.target.id, index)}>X</button>
                                                 </ul>
                                         })}
+                                        <input name='inputGame' value={this.state.inputGame} onChange={this.changeInput} placeholder='Add a new word'></input>
+                                        <button onClick={this.addWordGame}>Add new word</button>
                                 </div>
                         </StyledDiv>
                 );
