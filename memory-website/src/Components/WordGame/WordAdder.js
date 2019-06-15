@@ -28,12 +28,13 @@ class WordAdder extends React.Component {
                                 word: 'workspace',
                         }],
                         startScreen: 'on',
+                        inputGame: '',
                 }
         }
 
         changeInput = (event) => {
                 this.setState({
-                        input: event.target.value
+                        [event.target.name]: event.target.value
                 })
         };
 
@@ -77,7 +78,7 @@ class WordAdder extends React.Component {
                 this.setState({
                         startScreen: 'off'
                 })
-        }
+        };
 
         render() {
                 return (
@@ -90,12 +91,17 @@ class WordAdder extends React.Component {
                                                 <button id={list.word} onClick={(event) => this.deleteWord(event.target.id , index)}>X</button>
                                         </ul>
                                 })}
-                                <input value={this.state.input} onChange={this.changeInput} placeholder='Add a new word'></input>
+                                <input name='input' value={this.state.input} onChange={this.changeInput} placeholder='Add a new word'></input>
                                 <button onClick={this.addWord}>Add new word</button>
 
                                 <button onClick={this.startGame}>Start your Game</button>
                                 </div>
-                                <div className={this.state.startScreen}
+                                <div className={this.state.startScreen === 'off' ? 'on' : 'off'}>
+                                        <h1>Start writing your words from your memory</h1>
+                                        <input name='inputGame' value={this.state.inputGame} onChange={this.changeInput} placeholder='Add a new word'></input>
+                                        <button onClick={this.addWordGame}>Add new word</button>
+
+                                </div>
                         </StyledDiv>
                 );
         }
