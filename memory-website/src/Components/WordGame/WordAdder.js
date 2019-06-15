@@ -29,6 +29,7 @@ class WordAdder extends React.Component {
                         }],
                         startScreen: 'on',
                         inputGame: '',
+                        gameList: [],
                 }
         }
 
@@ -80,27 +81,36 @@ class WordAdder extends React.Component {
                 })
         };
 
+        addWordGame = () => {
+
+        }
+
         render() {
                 return (
                         <StyledDiv>
                                 <div className={this.state.startScreen === 'on' ? 'on' : 'off'} >
-                                <h1>Add here your words</h1>
-                                {this.state.list.map((list, index) => {
-                                        return <ul key={index}>
-                                                <li id={index}>{list.word}</li>
-                                                <button id={list.word} onClick={(event) => this.deleteWord(event.target.id , index)}>X</button>
-                                        </ul>
-                                })}
-                                <input name='input' value={this.state.input} onChange={this.changeInput} placeholder='Add a new word'></input>
-                                <button onClick={this.addWord}>Add new word</button>
+                                        <h1>Add here your words</h1>
+                                        {this.state.list.map((list, index) => {
+                                                return <ul key={index}>
+                                                        <li id={index}>{list.word}</li>
+                                                        <button id={list.word} onClick={(event) => this.deleteWord(event.target.id, index)}>X</button>
+                                                </ul>
+                                        })}
+                                        <input name='input' value={this.state.input} onChange={this.changeInput} placeholder='Add a new word'></input>
+                                        <button onClick={this.addWord}>Add new word</button>
 
-                                <button onClick={this.startGame}>Start your Game</button>
+                                        <button onClick={this.startGame}>Start your Game</button>
                                 </div>
                                 <div className={this.state.startScreen === 'off' ? 'on' : 'off'}>
                                         <h1>Start writing your words from your memory</h1>
                                         <input name='inputGame' value={this.state.inputGame} onChange={this.changeInput} placeholder='Add a new word'></input>
                                         <button onClick={this.addWordGame}>Add new word</button>
-
+                                        {this.state.list.map((list, index) => {
+                                                return <ul key={index}>
+                                                        <li id={index}>{list.word}</li>
+                                                        <button id={list.word} onClick={(event) => this.deleteWord(event.target.id, index)}>X</button>
+                                                </ul>
+                                        })}
                                 </div>
                         </StyledDiv>
                 );
