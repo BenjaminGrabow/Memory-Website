@@ -42,6 +42,7 @@ input {
 
 .input-button {
         margin: 1rem auto; 
+        width: 50%;
 }
 
 .off {
@@ -200,18 +201,20 @@ class WordAdder extends React.Component {
                                                                   </button>
                                                 </ul>
                                         })}
+                                        <div className="input-button">
                                         <input
                                                 name='inputGame'
                                                 value={this.state.inputGame}
                                                 onChange={this.changeInput}
                                                 placeholder='Add a new word'></input>
                                         <button onClick={this.addWordGame}>
-                                                Add new word
+                                                Add word
                                                 </button>
                                         <button
                                                 onClick={this.showResult} >
                                                 Finish
                                                 </button>
+                                                </div>
                                 </div>
                         </StyledDiv>
                 );
