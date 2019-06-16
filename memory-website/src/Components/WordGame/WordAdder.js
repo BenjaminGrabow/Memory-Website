@@ -3,8 +3,45 @@ import styled from "styled-components";
 
 const StyledDiv = styled.div`
 
+button {
+background-color: red;
+border-radius: 50%;
+width: 15%;
+height: 5rem;
+box-shadow: 1rem .5rem .5rem black;
+}
+
 ul {
-        list-style: none;
+list-style: none;
+background: #c31432;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+display: flex;
+color: white;
+width: 50%;
+margin: 1rem auto;
+justify-content: space-around;
+border-radius: 3rem;
+align-items: center;
+box-shadow: 1rem .5rem .5rem black;
+transition: all 2s ease-in;
+
+&:hover{
+        transform: rotate(20deg);
+}
+}
+
+
+input {
+        width: 40%;
+    border-radius: 3rem; 
+    margin-top: .5rem;
+    box-shadow: 1rem .5rem .5rem black;
+    font-size: 1.5rem; 
+}
+
+.input-button {
+        margin: 1rem auto; 
 }
 
 .off {
@@ -101,7 +138,20 @@ class WordAdder extends React.Component {
                         startScreen: "",
                         showResult: 'on'
                 })
-                console.log()
+
+                if (this.state.list.join('') === this.state.gameList.join('')
+                ) {
+                        this.setState({
+                                resultMessage: 'You have won !!!'
+                        })
+                }
+
+                if (this.state.list.join('') === this.state.gameList.join('')
+                        === false) {
+                        this.setState({
+                                resultMessage: 'Your forgot something.'
+                        })
+                }
         }
 
         render() {
@@ -122,6 +172,7 @@ class WordAdder extends React.Component {
                                                                  </button>
                                                 </ul>
                                         })}
+                                        <div className="input-button">
                                         <input name='input'
                                                 value={this.state.input}
                                                 onChange={this.changeInput}
@@ -132,6 +183,7 @@ class WordAdder extends React.Component {
                                         <button onClick={this.startGame}>
                                                 Start your Game
                                                 </button>
+                                                </div>
                                 </div>
                                 <div
                                         className={this.state.startScreen === 'on' ? 'off' : 'on'}>
