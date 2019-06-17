@@ -40,29 +40,35 @@ button {
 }
 `;
 
-const TopContent = () => {
-        return ( 
-                <StyledDiv>
-<div className="left">
-        <h1>The new standard in spend <br/> management</h1>
-        <p>Manage yoour entire spend process in one place. Request, pay, and automate <br/>
-        your AP accounting with Airbase</p>
-        <button>Get a demo</button>
-        <p className="trust">Trusted by finance teams at all stages</p>
-        <div className="row">
-                <img src={google} alt="google" />
-        <img src={microsoft} alt="microsoft"/>
-        </div>
-        <div className="row">
-        <img src={siemens}  alt="siemens"/>
-        <img src={huawei} alt="huawei"/>
-        </div>
-</div>
-<div className="right">
-        <img src={bulb} alt="bulb"/>
-</div>
-                </StyledDiv>
-         );
+class TopContent extends React.Component {
+        constructor(props) {
+                super(props);
+                this.state = {  }
+        }
+        render() { 
+                return ( 
+                        <StyledDiv>
+                        <div className="left">
+                                <h1>The new standard in spend <br/> management</h1>
+                                <p>Manage yoour entire spend process in one place. Request, pay, and automate <br/>
+                                your AP accounting with Airbase</p>
+                                <button>Get a demo</button>
+                                <p className="trust">Trusted by finance teams at all stages</p>
+                                <div className="row">
+                                        <img src={google} alt="google" />
+                                <img src={microsoft} alt="microsoft"/>
+                                </div>
+                                <div className="row">
+                                <img src={siemens}  alt="siemens"/>
+                                <img src={huawei} alt="huawei"/>
+                                </div>
+                        </div>
+                        <div className="right">
+                                <img src={bulb} alt="bulb"/>
+                        </div>
+                                        </StyledDiv>
+                 );
+        }
 }
  
 export default TopContent;
