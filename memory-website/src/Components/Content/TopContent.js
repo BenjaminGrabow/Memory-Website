@@ -9,6 +9,28 @@ import styled from 'styled-components';
 const StyledDiv = styled.div`
 display: flex;
 
+.typing {
+        position: relative;
+}
+
+@keyframes blink {
+        0%{
+                opacity: 0;
+        }
+        100%{
+                opacity: 1;
+        }
+}
+.typing::after {
+        content: "";
+        position: absolute;
+        width: .1rem;
+        height: 100%;
+        border-right: .2rem solid black;
+        animation: blink 0.5s infinite ease;
+}
+
+
 button {
         background-color: #28a745;
         color: white;
@@ -40,6 +62,16 @@ button {
 }
 `;
 
+const text = ['websites', 'illustration', 'hello'];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+ function type(){
+
+ }
+
 class TopContent extends React.Component {
         constructor(props) {
                 super(props);
@@ -49,7 +81,8 @@ class TopContent extends React.Component {
                 return ( 
                         <StyledDiv>
                         <div className="left">
-                                <h1>The new standard in spend <br/> management</h1>
+                                <h1>The game to train your</h1>
+                                <h1 className="typing">Memory</h1>
                                 <p>Manage yoour entire spend process in one place. Request, pay, and automate <br/>
                                 your AP accounting with Airbase</p>
                                 <button>Get a demo</button>
