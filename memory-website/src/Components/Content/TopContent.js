@@ -55,12 +55,11 @@ button {
 }
 
 .right {
-        width: 100%;
-        height: 100%
+
         img {
-                width: 70%;
-                height: 90%;
-                margin: 2rem;
+                width: 100%;
+                height: 30rem;
+               
         }
 }
 `;
@@ -100,24 +99,35 @@ class TopContent extends React.Component {
                 return (
                         <StyledDiv>
                                 <div className="left">
-                                        <h1>The game to train your</h1>
-                                        <h1 className="typing">Hi</h1>
-                                        <p>Manage yoour entire spend process in one place. Request, pay, and automate <br />
-                                                your AP accounting with Airbase</p>
-                                        <button>Get a demo</button>
-                                        <p className="trust">Trusted by finance teams at all stages</p>
-
-                                        <div className="row">
-                                                <img src={google} alt="google" />
-                                                <img src={microsoft} alt="microsoft" />
-                                        </div>
-                                        <div className="row">
-                                                <img src={siemens} alt="siemens" />
-                                                <img src={huawei} alt="huawei" />
-                                        </div>
+                                        <Animated animationIn="bounceInDown"
+                                                animationOut="bounce"
+                                                animationInDuration={3000}
+                                                animationOutDuration={3000}
+                                                isVisible={true}>
+                                                <h1>The game to train your</h1>
+                                                <h1 className="typing">Hi</h1>
+                                                <p>Manage yoour entire spend process in one place. Request, pay, and automate <br />
+                                                        your AP accounting with Airbase</p>
+                                                <button>Get a demo</button>
+                                                <p className="trust">Trusted by finance teams at all stages</p>
+                                        </Animated>
+                                        <Animated animationIn="bounceInLeft"
+                                                animationOut="bounce"
+                                                animationInDuration={3000}
+                                                animationOutDuration={3000}
+                                                isVisible={true}>
+                                                <div className="row">
+                                                        <img src={google} alt="google" />
+                                                        <img src={microsoft} alt="microsoft" />
+                                                </div>
+                                                <div className="row">
+                                                        <img src={siemens} alt="siemens" />
+                                                        <img src={huawei} alt="huawei" />
+                                                </div>
+                                        </Animated>
                                 </div>
                                 <div className="right">
-                                        <Animated animationIn="lightSpeedIn" animationOut="zoomOutLeft" animationInDuration={1800} animationOutDuration={1800} isVisible={true}>
+                                        <Animated animationIn="fadeInRightBig" animationOut="fadeOut" animationInDuration={1400} animationOutDuration={1400} isVisible={true}>
                                                 <img src={bulb} alt="bulb" />
                                         </Animated>
 
