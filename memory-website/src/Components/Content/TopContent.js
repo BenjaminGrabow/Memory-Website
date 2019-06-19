@@ -5,6 +5,7 @@ import huawei from './Huawei.jpg';
 import siemens from './siemens.jpg';
 import bulb from './Home.jpg'
 import styled from 'styled-components';
+import { Animated } from "react-animated-css";
 
 const StyledDiv = styled.div`
 display: flex;
@@ -54,6 +55,8 @@ button {
 }
 
 .right {
+        width: 100%;
+        height: 100%
         img {
                 width: 70%;
                 height: 90%;
@@ -65,59 +68,63 @@ button {
 class TopContent extends React.Component {
         constructor(props) {
                 super(props);
-                this.state = {  }
+                this.state = {}
         }
 
         componentDidMount = () => {
                 const texts = ['websites', 'illustration', 'hello'];
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
+                let count = 0;
+                let index = 0;
+                let currentText = "";
+                let letter = "";
 
- (function type(){
+                (function type() {
 
-        if(count === texts.length){
-                count = 0;
-        }
+                        if (count === texts.length) {
+                                count = 0;
+                        }
 
-        currentText = texts[count];
-        letter = currentText.slice(0, ++index);
+                        currentText = texts[count];
+                        letter = currentText.slice(0, ++index);
 
-        document.querySelector('.typing').textContent = letter;
-        if(letter.length === currentText.length){
-                count++;
-                index = 0;
-        }
-        setTimeout(type, 400);
-}());
-        }
+                        document.querySelector('.typing').textContent = letter;
+                        if (letter.length === currentText.length) {
+                                count++;
+                                index = 0;
+                        }
+                        setTimeout(type, 400);
+                }());
+        };
 
-        render() { 
-                return ( 
+        render() {
+                return (
                         <StyledDiv>
-                        <div className="left">
-                                <h1>The game to train your</h1>
-                                <h1 className="typing">Memory</h1>
-                                <p>Manage yoour entire spend process in one place. Request, pay, and automate <br/>
-                                your AP accounting with Airbase</p>
-                                <button>Get a demo</button>
-                                <p className="trust">Trusted by finance teams at all stages</p>
-                                <div className="row">
-                                        <img src={google} alt="google" />
-                                <img src={microsoft} alt="microsoft"/>
+                                <div className="left">
+                                        <h1>The game to train your</h1>
+                                        <h1 className="typing">Hi</h1>
+                                        <p>Manage yoour entire spend process in one place. Request, pay, and automate <br />
+                                                your AP accounting with Airbase</p>
+                                        <button>Get a demo</button>
+                                        <p className="trust">Trusted by finance teams at all stages</p>
+
+                                        <div className="row">
+                                                <img src={google} alt="google" />
+                                                <img src={microsoft} alt="microsoft" />
+                                        </div>
+                                        <div className="row">
+                                                <img src={siemens} alt="siemens" />
+                                                <img src={huawei} alt="huawei" />
+                                        </div>
                                 </div>
-                                <div className="row">
-                                <img src={siemens}  alt="siemens"/>
-                                <img src={huawei} alt="huawei"/>
+                                <div className="right">
+                                        <Animated animationIn="lightSpeedIn" animationOut="zoomOutLeft" animationInDuration={1800} animationOutDuration={1800} isVisible={true}>
+                                                <img src={bulb} alt="bulb" />
+                                        </Animated>
+
                                 </div>
-                        </div>
-                        <div className="right">
-                                <img src={bulb} alt="bulb"/>
-                        </div>
-                                        </StyledDiv>
-                 );
+                        </StyledDiv>
+                );
         }
 }
- 
+
 export default TopContent;
