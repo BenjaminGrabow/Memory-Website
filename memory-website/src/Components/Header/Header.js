@@ -14,7 +14,8 @@ background: #bdc3c7;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         width: 100%;
-        height: 1.5rem;
+        height: 2rem;
+        border-radius: 40%;
  }
 
 a {
@@ -22,7 +23,13 @@ a {
         width: 100%;
         color: white;
         padding: 1.5rem;
-        
+        margin: .8rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+
+        &:hover {
+     color: black;
+        }        
 }
 
 .navSlider-exit > .page {
