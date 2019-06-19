@@ -127,7 +127,11 @@ class TopContent extends React.Component {
                                         </Animated>
                                 </div>
                                 <div className="right">
-                                        <Animated animationIn="fadeInRightBig" animationOut="fadeOut" animationInDuration={1400} animationOutDuration={1400} isVisible={true}>
+                                        <Animated animationIn="fadeInRightBig"
+                                                animationOut="fadeOut"
+                                                animationInDuration={1400}
+                                                animationOutDuration={1400}
+                                                isVisible={true}>
                                                 <img src={bulb} alt="bulb" />
                                         </Animated>
 

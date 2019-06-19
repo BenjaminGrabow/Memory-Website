@@ -60,49 +60,49 @@ const MiddleContent = () => {
                                 From purchase request to general ledger</h1>
                         <p>Scalable workflows to request, pay, and sync transactions to GL in real-time.</p>
                         <div className="row">
-                        <ScrollAnimation 
-                        className="column"
-                        animateIn='bounceInRight'>
-                              
+                                <ScrollAnimation
+                                        className="column"
+                                        animateIn='bounceInDown'>
+
                                         <img src={pic1} alt="pic1"></img>
                                         <h3>Pre-approvals</h3>
                                         <p>Get ahead of spend with a <br />
                                                 streamlined approval process.</p>
                                         <a href="/"> Learn more &rarr;</a>
-                              
-</ScrollAnimation>
-<ScrollAnimation animateIn='bounceInLeft'
-className="column">
-                              
-  
+
+                                </ScrollAnimation>
+                                <ScrollAnimation animateIn='bounceInRight'
+                                        className="column">
+
+
                                         <img src={pic2} alt="pic2" />
                                         <h3>Payments</h3>
                                         <p>All of your payments--card, ACH<br />
                                                 and check-- in one place.</p>
                                         <a href="/"> Learn more <span>&rarr;</span></a>
-                             
-  </ScrollAnimation>
-                                <ScrollAnimation animateIn='bounceInRight'
-                                className="column">
-  
-                               
+
+                                </ScrollAnimation>
+                                <ScrollAnimation animateIn='bounceInUp'
+                                        className="column">
+
+
                                         <img src={pic3} alt="pic3"></img>
                                         <h3>Accounting</h3>
                                         <p>Automate accounting<br />
                                                 faster.</p>
                                         <a href="/"> Learn more <span>&rarr;</span></a>
-                               
-</ScrollAnimation>
+
+                                </ScrollAnimation>
                                 <ScrollAnimation animateIn='bounceInLeft'
-                                className="column">
-                                
+                                        className="column">
+
                                         <img src={pic4} alt="pic4"></img>
                                         <h3>Visibility</h3>
                                         <p>Drive speed accountability, reduce<br />
                                                 waste, and increase savings.</p>
                                         <a href="/"> Learn more <span>&rarr;</span></a>
-                                
-</ScrollAnimation>
+
+                                </ScrollAnimation>
                         </div>
                 </StyleDiv>);
 }
